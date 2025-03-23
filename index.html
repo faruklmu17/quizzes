@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML, CSS, and JavaScript Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: royalblue;
+        }
+        .answer-key {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>HTML, CSS, and JavaScript Quiz</h2>
+        <form id="quizForm">
+            <ol>
+                <li>What is the purpose of the &lt;form&gt; element?
+                    <br><input type="radio" name="q1" value="c"> c) To group the snack and drink selection elements<br>
+                    <input type="radio" name="q1" value="a"> a) To create a table layout<br>
+                </li>
+                <li>What does the `onchange` attribute do in the &lt;select&gt; element?
+                    <br><input type="radio" name="q2" value="b"> b) It calls the `snackSelection()` function when the selection changes<br>
+                    <input type="radio" name="q2" value="a"> a) It changes the background color of the dropdown<br>
+                </li>
+                <li>What happens when a user selects a snack?
+                    <br><input type="radio" name="q3" value="b"> b) The snack selection is displayed dynamically<br>
+                    <input type="radio" name="q3" value="c"> c) The drink selection changes automatically<br>
+                </li>
+            </ol>
+            <button type="button" onclick="checkAnswers()">Submit Answers</button>
+        </form>
+        
+        <div class="answer-key" id="answerKey">
+            <h3>Answer Key</h3>
+            <p>1. Correct Answer: c) To group the snack and drink selection elements</p>
+            <p>2. Correct Answer: b) It calls the `snackSelection()` function when the selection changes</p>
+            <p>3. Correct Answer: b) The snack selection is displayed dynamically</p>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            document.getElementById("answerKey").style.display = "block";
+        }
+    </script>
+</body>
+</html>
